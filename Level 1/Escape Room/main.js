@@ -58,7 +58,7 @@ while (characterAlive||doorClosed) {
 
 
 
-/*et walking = readlineSync.keyIn("\nWhat will you do?\n\n[w]Walk [p]Player Info [q]Quit ", {limit: "wpq"})
+/*etdddd walking = readlineSync.keyIn("\nWhat will you do?\n\n[w]Walk [p]Player Info [q]Quit ", {limit: "wpq"})
 if (walking === "w" && distanceLeftToTravel >= 0) {
   let distanceWalked = Math.floor(Math.random() * 25)
 }

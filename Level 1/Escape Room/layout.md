@@ -3,7 +3,7 @@
 //console.log(name + ", you find yourself waking up in a dark room.  A small, barred hole in the ceiling reveals just enough moonlight for you to make out three things: A door, a hole in the wall, and a bucket.  What do you do?");
 
 //boolean
-class storyVariables {
+class storyVariable {
     constructor(characterAlive) {
         this.characterAlive = true;
         this.doorOpen = false;
