@@ -84,28 +84,8 @@ while (characterAlive && doorClosed) {
 
 
 
-/*etdddd walking = readlineSync.keyIn("\nWhat will you do?\n\n[w]Walk [p]Player Info [q]Quit ", {limit: "wpq"})
-if (walking === "w" && distanceLeftToTravel >= 0) {
-  let distanceWalked = Math.floor(Math.random() * 25)
-}
-if (originalQuestion == 'die') {
-  console.log ('You have died.');
-  characterAlive = false;
-} else if (originalQuestion != 'I inspect the bucket.') {
-    console.log("You are now inspecting the bucket");
-} 
-
-const originalQuestion = () => readlineSync.question("What do you do at this time? ");
-
-let answer = "Inspect Bucket"
-
-while  (originalQuestion != answer) {
-  console.log(`Is the character alive? ${characterAlive}`)
-  if (originalQuestion == `die`) {
-    console.log ('blahblahblah')
-    characterAlive = false;
-  }
-  originalQuestion()
-} 
-
-console.log("You are now inspecting the bucket")*/
+/*
+Want to add the option to play again at the end of every game.
+Want to have the option for multiple responses to the same answer (look in the hole 1, look in the hole 2 search the bucket 1 search the bucket 2)
+Proof read and polish
+*/
