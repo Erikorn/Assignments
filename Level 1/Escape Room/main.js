@@ -33,8 +33,11 @@ function escapeRoom() {
     break
     }
   }
+  if (escapeRoom === "b") {
+    console.log ("\nIt appears to be a small, dark and mysterious hole in the wall with a very ominous feeling.  It is roughly wide enough to put your hand in. ")
+  }
   while (escapeRoom === "b") {
-    let inspectHole = readlineSync.keyIn("\nIt appears to be a small, dark and mysterious hole in the wall with a very ominous feeling.  It is roughly wide enough to put your hand in. \n\n[a]Look through the Hole \n[b]Reach into the Hole \n[c]Leave the Hole Alone \n\n", {limit: ("abc")})
+    let inspectHole = readlineSync.keyIn("\n[a]Look through the Hole \n[b]Reach into the Hole \n[c]Leave the Hole Alone \n\n", {limit: ("abc")})
     if (inspectHole === "a") {
       console.log("\nYou crouch down to peer through the hole, as soon as you're eye level lines up, a solid green fist pops out and punches you in the face. ")
     }
@@ -48,8 +51,11 @@ function escapeRoom() {
       break
     }
   }
+  if (escapeRoom === "c") {
+    console.log ("\nIt appears to be a simple metal bucket, it smells horrible...  ")
+  }
   while (escapeRoom === "c") {
-    let inspectBucket = readlineSync.keyIn("\nIt appears to be a simple metal bucket, it smells horrible...  \n\n[a]Kick the Bucket \n[b]Search the Bucket\n[c]Leave the Bucket Alone \n\n", {limit: ("abc")})
+    let inspectBucket = readlineSync.keyIn("\n[a]Kick the Bucket \n[b]Search the Bucket\n[c]Leave the Bucket Alone \n\n", {limit: ("abc")})
     if (inspectBucket === "a") {
       let kickBucket = readlineSync.keyIn("\nThis bucket smells horrible as it is, are you sure you want to spread it's contents all over the floor? \n\n[a]On second thought, better not. \n[b]KICK IT!!!!! \n\n", {limit: ("ab")})
       if (kickBucket === "a") {
