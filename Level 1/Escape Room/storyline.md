@@ -10,9 +10,8 @@ Inspect the Door
 
 
 
-  It appears to be a large and solid wooden door,
-  with a smaller wicket door in the center.
-  There is also an iron keyhole on the side.") 
+ It appears to be a large and solid wooden door, 
+ with an iron lock and a smaller half-size door in the center. 
 
 Knock on the Door
   
