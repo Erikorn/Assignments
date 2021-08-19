@@ -34,8 +34,24 @@ function escapeRoom() {
     else if (inspectDoor === "b") {
       if (foundDoorKey === true) {
         console.log("\nYou insert the foul-smelling key into the iron lock. \nWith some effort it turns with a loud click.  \nThe door swings opens easily, exposing a line of grinning Dwarves. \nTheir palms raised in the air, waiting to reward you with high fives in celebration of your glorious victory.\n\nThe End\n")
-        doorClosed = false;
-        break
+        let gameOver = readlineSync.keyIn("\nWould you like to play again? \n\n[a]Yes [b]No\n\n")
+  
+        if (gameOver === "a") {
+          console.log ("\nYou wake in a cold and dark room.  \nA small, barred hole in the ceiling reveals \njust enough moonlight for you to make out three things: \nA door, a hole in the wall, and a bucket.")
+          characterAlive = true; 
+          doorClosed = true; 
+          foundDoorKey = false; 
+          knockedOnDoor = false; 
+          triedToOpenDoor = false; 
+          lookedThroughHole = false; 
+          searchedBucket = false; 
+          break
+        }
+        else if (gameOver === "b") {
+          console.log("Thanks for playing!") 
+          doorClosed = false;
+          break
+        }
       }
 
       else if (triedToOpenDoor === false) {
@@ -73,7 +89,7 @@ function escapeRoom() {
     }
 
     else if (inspectHole === "b") {
-      console.log("\nThe voice of reason in your head screams for you to stop. \nYou tentatively reach your hand into the hole.  \nA green hand suddenly locks around your wrist with a terrifying strength. \nPulling with an insane amount of force, you hear the sickening \nsound of flesh tearing as your arm is ripped out of it's socket.  \nYou fall to the ground, life force gushing from where your shoulder used to be.  \nAs your vision fades, a sadistic cackling can be heard from the other side.  \nFor some reason, you feel like this was not a very smart thing to do. \n\nYou dead.\n")
+      console.log("\nThe voice of reason in your head screams for you to stop. \nYou tentatively reach your hand into the hole.  \nA green hand suddenly locks around your wrist with a terrifying strength. \nPulling with an insane amount of force, you hear the sickening \nsound of flesh tearing as your arm is ripped out of it's socket.  \nYou fall to the ground, life force gushing from where your shoulder used to be.  \nAs your vision fades, a sadistic cackling can be heard from the other side.  \nFor some reason, you feel like this was not a very smart thing to do. \n\nYou dead.")
       let gameOver = readlineSync.keyIn("\nWould you like to play again? \n\n[a]Yes [b]No\n\n")
 
       if (gameOver === "a") {
@@ -110,9 +126,25 @@ function escapeRoom() {
       let kickBucket = readlineSync.keyIn("\nThis bucket smells foul enough as it is! \nAre you sure you want its contents spread across the room? \n\n[a]KICK IT!!!!! \n[b]On second thought, better not. \n\n", {limit: ("ab")})
       
       if (kickBucket === "a") {
-        console.log("\nWith a satisfying punt, you send the bucket soaring across the room.  \nIt's vile filth explodes throughout the room as it crashes against the wall. \nYou hear short footsteps angrily race toward your cell. \nThe door bursting open, a stout and angry Dwarf unsheathes a short sword and runs you through.  \nYou Collapse to the floor, desperately clinging to your stomach \nin vain as your innards spill out.  As you perish, your final, dying thought is an ironic one: \nYou just figuratively and literally kicked the bucket. \n\nYou dead, fool.\n")
-        characterAlive = false;
-        break
+        console.log("\nWith a satisfying punt, you send the bucket soaring across the room.  \nIt's vile filth explodes throughout the room as it crashes against the wall. \nYou hear short footsteps angrily race toward your cell. \nThe door bursting open, a stout and angry Dwarf unsheathes a short sword and runs you through.  \nYou Collapse to the floor, desperately clinging to your stomach \nin vain as your innards spill out.  As you perish, your final, dying thought is an ironic one: \nYou just figuratively and literally kicked the bucket. \n\nYou dead, fool.")
+        let gameOver = readlineSync.keyIn("\nWould you like to play again? \n\n[a]Yes [b]No\n\n")
+  
+        if (gameOver === "a") {
+          console.log ("\nYou wake in a cold and dark room.  \nA small, barred hole in the ceiling reveals \njust enough moonlight for you to make out three things: \nA door, a hole in the wall, and a bucket.")
+          characterAlive = true; 
+          doorClosed = true; 
+          foundDoorKey = false; 
+          knockedOnDoor = false; 
+          triedToOpenDoor = false; 
+          lookedThroughHole = false; 
+          searchedBucket = false; 
+          break
+        }
+        else if (gameOver === "b") {
+          console.log("Goodbye") 
+          characterAlive = false;
+          break
+        }
       }
 
       else if (kickBucket === "b") {
