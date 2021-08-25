@@ -8,7 +8,7 @@ just fix the existing ones.
 
 // Written by Kent, Clark
 
-var Enemies=["Lex","Batman","Darkseid","Brainiac","General Zod","Doomsday"];
+var Enemies = ["Lex","Batman","Darkseid","Brainiac","General Zod","Doomsday"];
 
 function Who_Wins (isThereKryptonite, enemyname) {
     if (isThereKryptonite) {
@@ -21,31 +21,31 @@ function Who_Wins (isThereKryptonite, enemyname) {
 }
 
 for (var i=0;i<enemies.length;i++) {
-    var isThereKryptonite 
+    var isThereKryptonite
     if (i%2 === 0) {
         isThereKryptonite = true;
     } else {
         isThereKryptonite = false;
     }
-    console.log(Who_Wins(isThereKryptonite,enemies[i]));
+    console.log (Who_Wins(isThereKryptonite,enemies[i]));
 }
 
 function HowAttractedIsLoisLaneToMe () {
     // 1 is not at all attracted, 10 is "super" attracted...
-    return Math.floor((Mat.random()*10)+1);
+    return Math.floor ((Mat.random()*10)+1);
 }
 
-consol.log( HowAttractedIsLoisLaneToMe ()) ;
+consol.log ( HowAttractedIsLoisLaneToMe ()) ;
 
-var clarkKent=true;
-var superman=false;
+var clarkKent = true;
+var superman = false;
 
 while (clarkKent) {
-    console.log("I'm just a nerdy columnist");
-    var phoneBoothQuickChange =Math.random();
-    if (phoneBoothQuickChange>= 0.5) {
-        clarkKent=false;
-        superman=true;
-        console.log("Now I'm Superman!");
+    console.log ("I'm just a nerdy columnist");
+    var phoneBoothQuickChange = Math.random();
+    if (phoneBoothQuickChange = 0.5) {
+        clarkKent = false;
+        superman = true;
+        console.log ("Now I'm Superman!");
     }
 }
