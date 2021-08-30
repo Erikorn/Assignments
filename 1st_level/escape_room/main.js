@@ -34,9 +34,9 @@ function escapeRoom() {
     else if (inspectDoor === "b") {
       if (foundDoorKey === true) {
         console.log("\nWith some effort, the foul-smelling key turns with a loud click, and door swings opens easily. \nOutside you find a line of Dwarves, grinning as they raise their palms into the air, \nwaiting to reward you with high fives in celebration of your glorious victory.\n\nThe End Fool")
-        let gameOver = readlineSync.keyIn("\nWould you like to play again? \n\n[a]Yes [b]No\n\n")
+        let gameOver = readlineSync.keyIn("\nWould you like to play again? \n\n[y]Yes [n]No\n\n")
   
-        if (gameOver === "a") {
+        if (gameOver === "y") {
           console.log ("\nYou wake in a cold and dark room.  \nA small, barred hole in the ceiling reveals \njust enough moonlight for you to make out three things: \nA door, a hole in the wall, and a bucket.")
           characterAlive = true; 
           doorClosed = true; 
@@ -55,7 +55,7 @@ function escapeRoom() {
       }
 
       else if (triedToOpenDoor === false) {
-        console.log("\nYou try the door.  It seems to be locked and will not budge.  \nA mix of snickering and snorts seem to taunt you from the other side. ")
+        console.log("\nYou try the door.  It seems to be locked and will not budge.  \nA mix of snickering and snorts taunt you from the other side. ")
         triedToOpenDoor = true;
       } 
 
@@ -90,9 +90,9 @@ function escapeRoom() {
 
     else if (inspectHole === "b") {
       console.log("\nA voice screams from your head, begging you to stop. You ignore it, \ntentatively reaching into the hole. A deafening cry pierces the air as \na green hand locks around your wrist. It pulls with a sudden and terrifying strength, \nyour flesh tearing with a sickening sound as your arm is ripped off, shoulder and all.  \nSlumping to the ground, life force gushes from where your shoulder and arm used to be.  \nA sadistic cackling can be heard from the other side as your vision fades.  \nIn hindsight, you think that this may not have been a very good idea, then you die. ")
-      let gameOver = readlineSync.keyIn("\nDidn't your mom ever teach you not to stick your hand into strange and Scary-Ass Holes?\n\nWould you like to try again? \n\n[a]Yes [b]No\n\n")
+      let gameOver = readlineSync.keyIn("\nDidn't your mom ever teach you not to stick your hand into strange and Scary-Ass Holes?\n\nWould you like to try again? \n\n[y]Yes [n]No\n\n")
 
-      if (gameOver === "a") {
+      if (gameOver === "y") {
         console.log ("\nYou wake in a cold and dark room.  \nA small, barred hole in the ceiling reveals \njust enough moonlight for you to make out three things: \nA door, a hole in the wall, and a bucket.")
         characterAlive = true; 
         doorClosed = true; 
@@ -103,7 +103,7 @@ function escapeRoom() {
         searchedBucket = false; 
         break
       }
-      else if (gameOver === "b") {
+      else if (gameOver === "n") {
         console.log("\nGoodbye\n") 
         characterAlive = false;
         break
@@ -127,9 +127,9 @@ function escapeRoom() {
       
       if (kickBucket === "a") {
         console.log("\nWith a satisfying punt, you send the bucket soaring across the room.  \nVile filth explodes outward as it crashes against the wall. \nShort, angry steps race toward your cell. A very angry dwarf \nbarges in and runs you through with a short sword.  \nCollapsing to the floor, you desperately cling to your stomach \nas your innards spill out.  Your final, dying thought is an ironic one: \nYou have just figuratively and literally kicked the bucket. \n\nYou dead, fool.")
-        let gameOver = readlineSync.keyIn("\nWould you like to try again? \n\n[a]Yes [b]No\n\n")
+        let gameOver = readlineSync.keyIn("\nWould you like to try again? \n\n[y]Yes [n]No\n\n")
   
-        if (gameOver === "a") {
+        if (gameOver === "y") {
           console.log ("\nYou wake in a cold and dark room.  \nA small, barred hole in the ceiling reveals \njust enough moonlight for you to make out three things: \nA door, a hole in the wall, and a bucket.")
           characterAlive = true; 
           doorClosed = true; 
@@ -140,7 +140,7 @@ function escapeRoom() {
           searchedBucket = false; 
           break
         }
-        else if (gameOver === "b") {
+        else if (gameOver === "n") {
           console.log("\nGoodbye\n") 
           characterAlive = false;
           break
